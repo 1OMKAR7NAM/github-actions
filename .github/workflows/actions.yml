@@ -4,6 +4,16 @@ jobs:
   run-github-action:
     runs-on: ubuntu-latest
     steps:
+      - name: list fliles
+        run: |
+          ls -a
+          pwd
+      - name: checkout
+        uses: actions/checkout@v1 
+      - name: list post
+        run: |
+          ls -a 
+          pwd   
       - name: js action 
         id: act
         uses: actions/hello-world-javascript-action@v1
