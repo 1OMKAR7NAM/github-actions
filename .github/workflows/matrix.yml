@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: first check
         run: node -v
-      - uses: actions/setup-node@v1
+      - name: 2nd step
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{matrix.node_version}}
-      - name: log-version    
+          node-version: ${{matrix.node_version}}  
         run: node -v  
