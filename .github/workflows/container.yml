@@ -1,0 +1,21 @@
+name: container-workflow
+on: push
+jobs:
+  use-container-with-entrypoint-as-2:
+    runs-on: ubuntu-latest
+    container:
+      image: 18-alpine3.16
+    steps:
+      - name: log node version 
+        run: node -v 
+      - name: use docker
+        uses: docker://node:19-alpine3.16
+        with:
+          entrypoint: bin/echo
+          args: hello world  
+      - name: log node version
+        uses: docker://node:19-alpine3.16
+        with:
+          entrypoint: usr/bin/local/node #uses type -a node to find path for node command
+          args: "-v"           
+
