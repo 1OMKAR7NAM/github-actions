@@ -1,3 +1,3 @@
-#!/bash/sh
+#!/bin/bash
 echo $1 $2
-echo "final echo command in github actions in git"
+echo "hello world3"
