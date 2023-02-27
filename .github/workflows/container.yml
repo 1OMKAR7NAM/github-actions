@@ -4,7 +4,7 @@ jobs:
   use-container-with-entrypoint-as-2:
     runs-on: ubuntu-latest
     container:
-      image: 18-alpine3.16
+      image: node:18-alpine3.16
     steps:
       - name: log node version 
         run: node -v 
