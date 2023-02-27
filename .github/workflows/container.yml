@@ -16,6 +16,6 @@ jobs:
       - name: log node version
         uses: docker://node:19-alpine3.16
         with:
-          entrypoint: /usr/bin/local/node #uses type -a node to find path for node command
+          entrypoint: /usr/local/bin/node #uses type -a node to find path for node command
           args: "-v"           
 
