@@ -1,3 +1,3 @@
 #!/bash/sh
 echo $1 $2
-echo "final echo command in github actions in"
+echo "final echo command in github actions in git"
