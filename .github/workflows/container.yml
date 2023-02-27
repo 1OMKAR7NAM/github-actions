@@ -19,9 +19,15 @@ jobs:
           entrypoint: /usr/local/bin/node #uses type -a node to find path for node command
           args: "-v"           
       - uses: actions/checkout@v1    
+      - name: Set permissions for docker socket
+        run: sudo chmod 666 /var/run/docker.sock
+        shell: bash
+        # Runs the command inside the container
+        # Change this to the appropriate OS for your container image
       - name: run entrypoint using script
         uses: docker://node:18-alpine3.16
         with:
           entrypoint: ./
-          args: "hello2 world2"           
+          args: "hello2 world2"
+         
 
